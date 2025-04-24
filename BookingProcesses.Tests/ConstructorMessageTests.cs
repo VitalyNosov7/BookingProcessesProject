@@ -22,8 +22,8 @@ namespace BookingProcesses.Tests
         public void ConstructoredMessage_NewMessage_ReturnsNotNull()
         {
             ConstructorMessage constructorMessage = MakeConstructorMessage();
-            String newValue = "NewValue";
-            constructorMessage.ConstructoredMessage = newValue;
+            String newMessage = "New Message";
+            constructorMessage.ConstructoredMessage = newMessage;
             var result = constructorMessage.ConstructoredMessage;
             Assert.That(result, !Is.Null);
         }
@@ -40,7 +40,7 @@ namespace BookingProcesses.Tests
         public void TemplateMessage_NewTemplate_ReturnsNotNull()
         {
             ConstructorMessage constructorMessage = MakeConstructorMessage();
-            String newTemplate = "NewTemplate";
+            String newTemplate = "New Template";
             constructorMessage.TemplateMessage = newTemplate;
             var result = constructorMessage.TemplateMessage;
             Assert.That(result, !Is.Null);
