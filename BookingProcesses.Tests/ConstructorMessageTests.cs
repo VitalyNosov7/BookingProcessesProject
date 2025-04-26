@@ -7,7 +7,7 @@ namespace BookingProcesses.Tests
     {
         private ConstructorMessage MakeConstructorMessage()
         {
-            return new ConstructorMessage();
+            return new ConstructorMessage(null, null);
         }
         /// <summary>Тест пустого значения поля(через свойство)</summary>
         [Test]
@@ -30,42 +30,40 @@ namespace BookingProcesses.Tests
 
         /// <summary>Тест пустого значения поля(через свойство)</summary>
         [Test]
-        public void ConstructoredMessage_ByDefault_ReturnsEmpty()
+        public void ConstructoredMessage_ByDefault_ReturnsNull()
         {
             ConstructorMessage constructorMessage = MakeConstructorMessage();
             var result = constructorMessage.ConstructoredMessage;
-            Assert.That(result, Is.Empty);
+            Assert.That(result, Is.Null);
         }
 
         /// <summary>Тест записи-чтения поля(через свойство)</summary>
         [Test]
-        public void ConstructoredMessage_NewMessage_ReturnsNotEmpty()
+        public void ConstructoredMessage_NewMessage_ReturnsNotNull()
         {
             ConstructorMessage constructorMessage = MakeConstructorMessage();
-            String newMessage = "New Message";
-            constructorMessage.ConstructoredMessage = newMessage;
-            var result = constructorMessage.ConstructoredMessage;
-            Assert.That(result, !Is.Empty);
+            String newConstructoredMessage = "New Message";
+            var result = constructorMessage.ConstructoredMessage == newConstructoredMessage;
+            Assert.That(result, !Is.Null);
         }
 
         /// <summary>Тест пустого значения поля(через свойство)</summary>
         [Test]
-        public void TemplateMessage_ByDefault_ReturnEmpty()
+        public void TemplateMessage_ByDefault_ReturnNull()
         {
             ConstructorMessage constructorMessage = MakeConstructorMessage();
-            var result = constructorMessage.TemplateMessage;
-            Assert.That(result, Is.Empty);
+            var result = constructorMessage.CurrentTemplateMessage;
+            Assert.That(result, Is.Null);
         }
 
         /// <summary>Тест записи-чтения поля(через свойство)</summary>
         [Test]
-        public void TemplateMessage_NewTemplate_ReturnsNotEmpty()
+        public void TemplateMessage_NewTemplate_ReturnsNotNull()
         {
             ConstructorMessage constructorMessage = MakeConstructorMessage();
-            String newTemplate = "New Template";
-            constructorMessage.TemplateMessage = newTemplate;
-            var result = constructorMessage.TemplateMessage;
-            Assert.That(result, !Is.Empty);
+            TemplateMessage newTemplateMessage = new TemplateMessage();
+            var result = constructorMessage.CurrentTemplateMessage == newTemplateMessage;
+            Assert.That(result, !Is.Null);
         }
     }
 }

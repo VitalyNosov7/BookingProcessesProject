@@ -7,28 +7,37 @@
     /// </summary>
     public class ConstructorMessage
     {
-        private BookingOperation _currentBookingOperation = null;
+        #region СВОЙСТВА
+        /// <summary>Текущая операция бронирования.</summary>
+        private BookingOperation? _currentBookingOperation = default;
         public BookingOperation CurrentBookingOperation
         {
-            get { return _currentBookingOperation; }
+            get { return _currentBookingOperation!; }
             set { _currentBookingOperation = value; }
         }
 
         /// <summary>Сформированное сообщение.</summary>
-        private String _constructoredMessage = String.Empty;
+        private String? _constructoredMessage = default;
         /// <summary>Сформированное сообщение.</summary>
         public String ConstructoredMessage
         {
-            get { return _constructoredMessage; }
+            get { return _constructoredMessage!; }
             set { _constructoredMessage = value; }
         }
         /// <summary>Шаблон сообщения</summary>
-        private String _templateMessage = String.Empty;
+        private TemplateMessage? _currentTemplateMessage = default;
         /// <summary>Шаблон сообщения</summary>
-        public String TemplateMessage
+        public TemplateMessage CurrentTemplateMessage
         {
-            get { return _templateMessage; }
-            set { _templateMessage = value; }
+            get { return _currentTemplateMessage!; }
+            set { _currentTemplateMessage = value; }
+        }
+        #endregion
+
+        public ConstructorMessage(BookingOperation? bookingOperation, TemplateMessage? templateMessage)
+        {
+            CurrentBookingOperation = bookingOperation!;
+            CurrentTemplateMessage = templateMessage!;
         }
     }
 }

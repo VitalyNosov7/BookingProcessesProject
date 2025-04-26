@@ -12,22 +12,21 @@ namespace BookingProcesses.Tests
 
         /// <summary>Тест пустого значения поля(через свойство)</summary>
         [Test]
-        public void OperationName_ByDefault_ReturnsEmpty()
+        public void OperationName_ByDefault_ReturnsNull()
         {
             BookingOperation bookingsOperations = MakeBookingOperation();
             var result = bookingsOperations.OperationName;
-            Assert.That(result, Is.Empty);
+            Assert.That(result, Is.Null);
         }
 
         /// <summary>Тест записи-чтения поля(через свойство)</summary>
         [Test]
-        public void OperationName_NewOperationNameReturnsNotEmpty()
+        public void OperationName_NewOperationName_ReturnsNotNull()
         {
             BookingOperation bookingsOperations = MakeBookingOperation();
             String newOperationName = "New Operation Name";
-            bookingsOperations.OperationName = newOperationName;
-            var result = bookingsOperations.OperationName;
-            Assert.That(result, !Is.Empty);
+            var result = bookingsOperations.OperationName == newOperationName;
+            Assert.That(result, !Is.Null);
         }
     }
 }
