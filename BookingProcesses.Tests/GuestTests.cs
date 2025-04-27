@@ -14,8 +14,8 @@ namespace BookingProcesses.Tests
         [Test]  
         public void CurrentGuest_ByDefault_ReturnsNull()
         {
-            Guest guest = MakeGuest();
-            var result = guest.CurrentPerson;
+            Guest currentGuest = MakeGuest();
+            var result = currentGuest.CurrentPerson;
             Assert.That(result, Is.Null);
         }
 
@@ -23,9 +23,10 @@ namespace BookingProcesses.Tests
         [Test]
         public void CurrentGuest_NewCurrentGuest()
         { 
-            Guest guest = MakeGuest();
+            Guest currentGuest = MakeGuest();
             Person newCurrentPerson = new Person();
-            var result = guest.CurrentPerson == newCurrentPerson;
+            currentGuest.CurrentPerson = newCurrentPerson;
+            var result = currentGuest.CurrentPerson;
             Assert.That(result, !Is.Null);
         }
 

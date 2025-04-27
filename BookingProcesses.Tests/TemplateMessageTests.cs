@@ -14,8 +14,8 @@ namespace BookingProcesses.Tests
         [Test]
         public void TemplateMessageName_ByDefault_ReturnsNull()
         {
-            TemplateMessage templateMessage = MakeTemplateMessage();
-            var result = templateMessage.TemplateMessageName;
+            TemplateMessage currentTemplateMessage = MakeTemplateMessage();
+            var result = currentTemplateMessage.TemplateMessageName;
             Assert.That(result, Is.Null);
         }
 
@@ -23,9 +23,10 @@ namespace BookingProcesses.Tests
         [Test]
         public void TemplateMessageName_NewTemplateMessageName_ReturnsNotNull()
         {
-            TemplateMessage templateMessage = MakeTemplateMessage();
+            TemplateMessage currentTemplateMessage = MakeTemplateMessage();
             String newTemplateMessageName = "New Template Message Name";
-            var result = templateMessage.TemplateMessageName == newTemplateMessageName;
+            currentTemplateMessage.TemplateMessageName = newTemplateMessageName;
+            var result = currentTemplateMessage.TemplateMessageName;
             Assert.That(result,!Is.Null);
         }
 
@@ -33,8 +34,8 @@ namespace BookingProcesses.Tests
         [Test]
         public void CurrentTemplateMessage_ByDefault_ReturnsNull()
         {
-            TemplateMessage templateMessage = MakeTemplateMessage();
-            var result = templateMessage.CurrentTemplateMessage;
+            TemplateMessage currentTemplateMessage = MakeTemplateMessage();
+            var result = currentTemplateMessage.CurrentTemplateMessage;
             Assert.That(result, Is.Null);
         }
 
@@ -43,9 +44,10 @@ namespace BookingProcesses.Tests
         [Test]
         public void CurrentTemplateMessage_NewTemplateMessage_ReturnsNotNull()
         {
-            TemplateMessage templateMessage = MakeTemplateMessage();
+            TemplateMessage currentTemplateMessage = MakeTemplateMessage();
             String newCurrentTemplateMessage = "New Current Template Message";
-            var result = templateMessage.CurrentTemplateMessage == newCurrentTemplateMessage;
+            currentTemplateMessage.CurrentTemplateMessage = newCurrentTemplateMessage;
+            var result = currentTemplateMessage.CurrentTemplateMessage;
             Assert.That(result, !Is.Null);
         }
     }

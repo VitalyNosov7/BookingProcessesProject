@@ -23,8 +23,9 @@ namespace BookingProcesses.Tests
         public void CurrentBookingOperation_NewBookingOperation_ReturnsNotNull()
         {
             ConstructorMessage constructorMessage = MakeConstructorMessage();
-            BookingOperation currentBookingOperation = new BookingOperation();
-            var result = constructorMessage.CurrentBookingOperation == currentBookingOperation;
+            BookingOperation newBookingOperation = new BookingOperation();
+            constructorMessage.CurrentBookingOperation = newBookingOperation;
+            var result = constructorMessage.CurrentBookingOperation;
             Assert.That(result, !Is.Null);
         }
 
@@ -41,9 +42,10 @@ namespace BookingProcesses.Tests
         [Test]
         public void ConstructoredMessage_NewMessage_ReturnsNotNull()
         {
-            ConstructorMessage constructorMessage = MakeConstructorMessage();
+            ConstructorMessage currentConstructorMessage = MakeConstructorMessage();
             String newConstructoredMessage = "New Message";
-            var result = constructorMessage.ConstructoredMessage == newConstructoredMessage;
+            currentConstructorMessage.ConstructoredMessage = newConstructoredMessage;
+            var result = currentConstructorMessage.ConstructoredMessage;
             Assert.That(result, !Is.Null);
         }
 
@@ -51,18 +53,19 @@ namespace BookingProcesses.Tests
         [Test]
         public void TemplateMessage_ByDefault_ReturnNull()
         {
-            ConstructorMessage constructorMessage = MakeConstructorMessage();
-            var result = constructorMessage.CurrentTemplateMessage;
+            ConstructorMessage currentConstructorMessage = MakeConstructorMessage();
+            var result = currentConstructorMessage.CurrentTemplateMessage;
             Assert.That(result, Is.Null);
         }
 
         /// <summary>Тест записи-чтения поля(через свойство)</summary>
         [Test]
-        public void TemplateMessage_NewTemplate_ReturnsNotNull()
+        public void TemplateMessage_NewTemplateMessage_ReturnsNotNull()
         {
-            ConstructorMessage constructorMessage = MakeConstructorMessage();
+            ConstructorMessage currentConstructorMessage = MakeConstructorMessage();
             TemplateMessage newTemplateMessage = new TemplateMessage();
-            var result = constructorMessage.CurrentTemplateMessage == newTemplateMessage;
+            currentConstructorMessage.CurrentTemplateMessage = newTemplateMessage;
+            var result = currentConstructorMessage.CurrentTemplateMessage;
             Assert.That(result, !Is.Null);
         }
     }

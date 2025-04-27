@@ -14,8 +14,8 @@ namespace BookingProcesses.Tests
         [Test]
         public void OperationName_ByDefault_ReturnsNull()
         {
-            BookingOperation bookingsOperations = MakeBookingOperation();
-            var result = bookingsOperations.OperationName;
+            BookingOperation currentBookingOperation = MakeBookingOperation();
+            var result = currentBookingOperation.OperationName;
             Assert.That(result, Is.Null);
         }
 
@@ -23,9 +23,10 @@ namespace BookingProcesses.Tests
         [Test]
         public void OperationName_NewOperationName_ReturnsNotNull()
         {
-            BookingOperation bookingsOperations = MakeBookingOperation();
+            BookingOperation currentBookingOperation = MakeBookingOperation();
             String newOperationName = "New Operation Name";
-            var result = bookingsOperations.OperationName == newOperationName;
+            currentBookingOperation.OperationName = newOperationName;
+            var result = currentBookingOperation.OperationName;
             Assert.That(result, !Is.Null);
         }
     }

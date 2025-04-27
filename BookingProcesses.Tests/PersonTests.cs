@@ -14,8 +14,8 @@ namespace BookingProcesses.Tests
         [Test]
         public void LastName_ByDefault_ReturnsNull()
         {
-            Person person = MakePerson();
-            var result = person.LastName;
+            Person currentPerson = MakePerson();
+            var result = currentPerson.LastName;
             Assert.That(result, Is.Null);
         }
 
@@ -23,9 +23,10 @@ namespace BookingProcesses.Tests
         [Test]
         public void LastName_NewLastName_ReturnsNotNull()
         {
-            Person person = MakePerson();
+            Person currentPerson = MakePerson();
             String newLastName = "New Last Name";
-            var result = person.LastName == newLastName;
+            currentPerson.LastName = newLastName;
+            var result = currentPerson.LastName;
             Assert.That(result, !Is.Null);
         }
 
@@ -33,8 +34,8 @@ namespace BookingProcesses.Tests
         [Test]
         public void FirstName_ByDefault_ReturnsNull()
         {
-            Person person = MakePerson();
-            var result = person.FirstName;
+            Person currentPerson = MakePerson();
+            var result = currentPerson.FirstName;
             Assert.That(result, Is.Null);
         }
 
@@ -42,9 +43,10 @@ namespace BookingProcesses.Tests
         [Test]
         public void FirstName_NewFirstName_ReturnsNotNull()
         {  
-            Person person = MakePerson();
+            Person currentPerson = MakePerson();
             String newFirstName = "New First Name";
-            var result = person.FirstName == newFirstName;
+            currentPerson.FirstName = newFirstName;
+            var result = currentPerson.FirstName;
             Assert.That(result, !Is.Null);
         }
 
@@ -52,8 +54,8 @@ namespace BookingProcesses.Tests
         [Test]
         public void Patronymic_ByDefault_ReturntNull()
         {
-            Person person = MakePerson();
-            var result = person.Patronymic;
+            Person currentPerson = MakePerson();
+            var result = currentPerson.Patronymic;
             Assert.That(result, Is.Null);
         }
 
@@ -61,9 +63,10 @@ namespace BookingProcesses.Tests
         [Test]
         public void Patronymic_NewPatronymic_ReturnsNotNull()
         {
-            Person person = MakePerson();
+            Person currentPerson = MakePerson();
             String newPatronymic = "New Patronymic";
-            var result = person.Patronymic == newPatronymic;
+            currentPerson.Patronymic = newPatronymic;
+            var result = currentPerson.Patronymic;
             Assert.That(result, !Is.Null);
         }
     }

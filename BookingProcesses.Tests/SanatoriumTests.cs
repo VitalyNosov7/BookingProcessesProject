@@ -14,8 +14,8 @@ namespace BookingProcesses.Tests
         [Test]
         public void SanatoriumName_ByDefaut_ReturnsNull ()
         {
-            Sanatorium sanatorium = MakeSanatorium();
-            var result = sanatorium.SanatoriumName;
+            Sanatorium currentSanatorium = MakeSanatorium();
+            var result = currentSanatorium.SanatoriumName;
             Assert.That (result, Is.Null);
         }
 
@@ -23,9 +23,10 @@ namespace BookingProcesses.Tests
         [Test]
         public void Sanatorium_NewSanatoriumName_ResultsNotNull ()
         {
-            Sanatorium sanatorium =  MakeSanatorium();
+            Sanatorium currentSanatorium =  MakeSanatorium();
             String newSanatoriumName = "New Sanatorium Name";
-            var result = sanatorium.SanatoriumName == newSanatoriumName;
+            currentSanatorium.SanatoriumName = newSanatoriumName;
+            var result = currentSanatorium.SanatoriumName;
             Assert.That(result, !Is.Null);
         }
     }
