@@ -10,7 +10,7 @@ namespace BookingProcesses.Tests
             return new TemplateMessage();
         }
 
-        /// <summary>Тест пустого значения поля(через свойство)</summary>
+        /// <summary>Тест значения поля по умолчанию(через свойство)</summary>
         [Test]
         public void TemplateMessageName_ByDefault_ReturnsNull()
         {
@@ -29,7 +29,7 @@ namespace BookingProcesses.Tests
             Assert.That(result,!Is.Null);
         }
 
-        /// <summary>Тест пустого значения поля(через свойство)</summary>
+        /// <summary>Тест значения поля по умолчанию(через свойство)</summary>
         [Test]
         public void CurrentTemplateMessage_ByDefault_ReturnsNull()
         {

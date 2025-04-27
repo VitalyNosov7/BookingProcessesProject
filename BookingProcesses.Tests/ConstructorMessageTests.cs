@@ -9,7 +9,7 @@ namespace BookingProcesses.Tests
         {
             return new ConstructorMessage(null, null);
         }
-        /// <summary>Тест пустого значения поля(через свойство)</summary>
+        /// <summary>Тест значения поля по умолчанию(через свойство)</summary>
         [Test]
         public void CurrentBookingOperation_ByDefault_ReturnsNull()
         {
@@ -28,7 +28,7 @@ namespace BookingProcesses.Tests
             Assert.That(result, !Is.Null);
         }
 
-        /// <summary>Тест пустого значения поля(через свойство)</summary>
+        /// <summary>Тест значения поля по умолчанию(через свойство)</summary>
         [Test]
         public void ConstructoredMessage_ByDefault_ReturnsNull()
         {
@@ -47,7 +47,7 @@ namespace BookingProcesses.Tests
             Assert.That(result, !Is.Null);
         }
 
-        /// <summary>Тест пустого значения поля(через свойство)</summary>
+        /// <summary>Тест значения поля по умолчанию(через свойство)</summary>
         [Test]
         public void TemplateMessage_ByDefault_ReturnNull()
         {

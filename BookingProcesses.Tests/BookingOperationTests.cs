@@ -10,7 +10,7 @@ namespace BookingProcesses.Tests
             return new BookingOperation();
         }
 
-        /// <summary>Тест пустого значения поля(через свойство)</summary>
+        /// <summary>Тест значения поля по умолчанию(через свойство)</summary>
         [Test]
         public void OperationName_ByDefault_ReturnsNull()
         {

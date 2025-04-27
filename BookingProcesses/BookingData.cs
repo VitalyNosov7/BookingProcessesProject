@@ -15,7 +15,15 @@
             set { _bookingNumber = value; }
         }
 
-        // TODO: Информация о госте (на которого оформляется бронь) вынести в отдельный класс.
+        /// <summary>Информация о госте(гостях).</summary>
+        private Guest[]?  _currentGuests = default;
+        /// <summary>Информация о госте(гостях).</summary>
+        public Guest[] CurrentGuests
+        {
+            get { return _currentGuests!; }
+            set { _currentGuests = value; }
+        }
+        
 
         // TODO: Информация о санатории(название, категория номера, период проживания, расчет и т.п.)
         // вынести в отдельный класс.
