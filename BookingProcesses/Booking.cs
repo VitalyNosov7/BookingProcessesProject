@@ -6,6 +6,7 @@
     /// </summary>
     public class Booking
     {
+        #region СВОЙСТВА
         /// <summary>Номер брони.</summary>
         private UInt32 _bookingNumber = default;
         /// <summary>Номер брони.</summary>
@@ -32,5 +33,6 @@
             get { return _currentSanatorium!; }
             set { _currentSanatorium = value; }
         }
+        #endregion
     }
 }

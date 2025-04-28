@@ -23,7 +23,7 @@ namespace BookingProcesses.Tests
         public void CurrentBookingOperation_NewBookingOperation_ReturnsNotNull()
         {
             ConstructorMessage constructorMessage = MakeConstructorMessage();
-            BookingOperation newBookingOperation = new BookingOperation();
+            BookingOperation newBookingOperation = new BookingOperation(null);
             constructorMessage.CurrentBookingOperation = newBookingOperation;
             var result = constructorMessage.CurrentBookingOperation;
             Assert.That(result, !Is.Null);

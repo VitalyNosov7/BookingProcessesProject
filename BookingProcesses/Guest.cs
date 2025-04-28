@@ -6,6 +6,7 @@
     /// </summary>
     public class Guest
     {
+        #region СВОЙСТВА
         /// <summary>Информация о госте.</summary>
         private Person? _currentPerson = default;
         /// <summary>Информация о госте.</summary>
@@ -14,5 +15,6 @@
             get { return _currentPerson!; }
             set { _currentPerson = value; }
         }
+        #endregion
     }
 }

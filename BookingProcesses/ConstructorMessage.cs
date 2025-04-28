@@ -7,6 +7,12 @@
     /// </summary>
     public class ConstructorMessage
     {
+        public ConstructorMessage(BookingOperation? bookingOperation, TemplateMessage? templateMessage)
+        {
+            CurrentBookingOperation = bookingOperation!;
+            CurrentTemplateMessage = templateMessage!;
+        }
+
         #region СВОЙСТВА
         /// <summary>Текущая операция бронирования.</summary>
         private BookingOperation? _currentBookingOperation = default;
@@ -34,10 +40,5 @@
         }
         #endregion
 
-        public ConstructorMessage(BookingOperation? bookingOperation, TemplateMessage? templateMessage)
-        {
-            CurrentBookingOperation = bookingOperation!;
-            CurrentTemplateMessage = templateMessage!;
-        }
     }
 }
