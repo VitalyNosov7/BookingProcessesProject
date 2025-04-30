@@ -9,6 +9,26 @@ namespace BookingProcesses.Tests
         {
             return new ConstructorMessage(null, null);
         }
+
+        /// <summary>Тест значения поля по умолчанию(через свойство)</summary>
+        [Test]
+        public void CurrentBooking_ByDefault_ReturnsNull()
+        {
+            ConstructorMessage constructorMessage = MakeConstructorMessage();
+            var result = constructorMessage.CurrentBooking;
+            Assert.That(result, Is.Null);
+        }
+
+        [Test]
+        public void CurrentBooking_NewCurrentBooking_ReturnsNotNull()
+        {
+            ConstructorMessage constructorMessage = MakeConstructorMessage();
+            Booking newCurrentBooking = new Booking();
+            constructorMessage.CurrentBooking = newCurrentBooking;
+            var result = constructorMessage.CurrentBooking;
+            Assert.That(result, !Is.Null);
+        }
+
         /// <summary>Тест значения поля по умолчанию(через свойство)</summary>
         [Test]
         public void CurrentBookingOperation_ByDefault_ReturnsNull()

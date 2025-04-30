@@ -16,9 +16,9 @@
             set { _templateMessageName = value; }
         }
 
-        /// <summary>Текущий шаблон.</summary>
+        /// <summary>Тело шаблона.</summary>
         private String? _cuttentTemplateMessage = default;
-        /// <summary>Текущий шаблон.</summary>
+        /// <summary>Тело шаблона.</summary>
         public String CurrentTemplateMessage
         {
             get { return _cuttentTemplateMessage!; }

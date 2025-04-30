@@ -14,8 +14,19 @@
         }
 
         #region СВОЙСТВА
+
+        /// <summary>Текущие данные бронирования.</summary>
+        private Booking? _currentBooking = default;
+        /// <summary>Текущие данные бронирования.</summary>
+        public Booking CurrentBooking
+        {
+            get { return _currentBooking!; }
+            set { _currentBooking = value; }
+        }
+
         /// <summary>Текущая операция бронирования.</summary>
         private BookingOperation? _currentBookingOperation = default;
+        /// <summary>Текущая операция бронирования.</summary>
         public BookingOperation CurrentBookingOperation
         {
             get { return _currentBookingOperation!; }
