@@ -55,21 +55,21 @@ namespace BookingProcesses.Tests
 
         /// <summary>Тест значения поля по умолчанию(через свойство)</summary>
         [Test]
-        public void CurrentSanatorium_ByDefault_ReturnsNull()
+        public void CurrentResortComplex_ByDefault_ReturnsNull()
         {
             Booking currentBooking = MakeBookingData();
-            var result = currentBooking.CurrentSanatorium;
+            var result = currentBooking.CurrentResortComplex;
             Assert.That(result, Is.Null);
         }
 
         /// <summary>Тест записи-чтения поля(через свойство)</summary>
         [Test]
-        public void CurrentSanatorium_NewCurrentSanatorium_ReturnsNotNull()
+        public void CurrentResortComplex_NewCurrentSanatorium_ReturnsNotNull()
         {
             Booking currentBooking = MakeBookingData();
-            Sanatorium newCurrentSanatorium = new Sanatorium();
-            currentBooking.CurrentSanatorium = newCurrentSanatorium ;
-            var result = currentBooking.CurrentSanatorium;
+            ResortComplex newCurrentResortComplex = new ResortComplex();
+            currentBooking.CurrentResortComplex = newCurrentResortComplex;
+            var result = currentBooking.CurrentResortComplex;
             Assert.That(result, !Is.Null);
         }
     }

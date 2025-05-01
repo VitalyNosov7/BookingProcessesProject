@@ -3,19 +3,19 @@
 namespace BookingProcesses.Tests
 {
     [TestFixture]
-    public class SanatoriumTests
+    public class ResortComplexTests
     {
-        private Sanatorium MakeSanatorium()
+        private ResortComplex MakeSanatorium()
         {
-            return new Sanatorium();
+            return new ResortComplex();
         }
 
         /// <summary>Тест значения поля по умолчанию(через свойство)</summary>
         [Test]
         public void SanatoriumName_ByDefaut_ReturnsNull ()
         {
-            Sanatorium currentSanatorium = MakeSanatorium();
-            var result = currentSanatorium.SanatoriumName;
+            ResortComplex currentResortComplex = MakeSanatorium();
+            var result = currentResortComplex.ResortComplexName;
             Assert.That (result, Is.Null);
         }
 
@@ -23,10 +23,10 @@ namespace BookingProcesses.Tests
         [Test]
         public void Sanatorium_NewSanatoriumName_ResultsNotNull ()
         {
-            Sanatorium currentSanatorium =  MakeSanatorium();
-            String newSanatoriumName = "New Sanatorium Name";
-            currentSanatorium.SanatoriumName = newSanatoriumName;
-            var result = currentSanatorium.SanatoriumName;
+            ResortComplex currentResortComplex =  MakeSanatorium();
+            String newResortComplexName = "New Resort Complex Name";
+            currentResortComplex.ResortComplexName = newResortComplexName;
+            var result = currentResortComplex.ResortComplexName;
             Assert.That(result, !Is.Null);
         }
     }

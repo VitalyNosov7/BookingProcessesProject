@@ -1,4 +1,6 @@
-﻿namespace BookingProcesses
+﻿using BookingProcesses.Interfaces;
+
+namespace BookingProcesses
 {
     /// <summary>
     /// Данные брони.
@@ -6,6 +8,8 @@
     /// </summary>
     public class Booking
     {
+        //  TODO: Заменить поле и свойство Sanatorium на обобщенный интерфейс!
+
         #region СВОЙСТВА
         /// <summary>Номер брони.</summary>
         private UInt32 _bookingNumber = default;
@@ -26,12 +30,12 @@
         }
 
         /// <summary>Информация о санатории.</summary>
-        private Sanatorium? _currentSanatorium = default;
+        private IResortComplex? _currentResortComplex = default;
         /// <summary>Информация о санатории.</summary>
-        public Sanatorium CurrentSanatorium
+        public IResortComplex CurrentResortComplex
         {
-            get { return _currentSanatorium!; }
-            set { _currentSanatorium = value; }
+            get { return _currentResortComplex!; }
+            set { _currentResortComplex = value; }
         }
         #endregion
     }
