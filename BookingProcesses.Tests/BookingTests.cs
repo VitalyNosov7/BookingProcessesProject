@@ -1,4 +1,5 @@
-﻿using NUnit.Framework;
+﻿using BookingProcesses.Interfaces;
+using NUnit.Framework;
 
 namespace BookingProcesses.Tests
 {
@@ -67,7 +68,7 @@ namespace BookingProcesses.Tests
         public void CurrentResortComplex_NewCurrentSanatorium_ReturnsNotNull()
         {
             Booking currentBooking = MakeBookingData();
-            ResortComplex newCurrentResortComplex = new ResortComplex();
+            IResortComplex newCurrentResortComplex = new ResortComplex();
             currentBooking.CurrentResortComplex = newCurrentResortComplex;
             var result = currentBooking.CurrentResortComplex;
             Assert.That(result, !Is.Null);

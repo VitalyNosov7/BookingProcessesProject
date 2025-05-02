@@ -19,6 +19,7 @@ namespace BookingProcesses.Tests
             Assert.That(result, Is.Null);
         }
 
+        /// <summary>Тест записи-чтения поля(через свойство)</summary>
         [Test]
         public void CurrentBooking_NewCurrentBooking_ReturnsNotNull()
         {

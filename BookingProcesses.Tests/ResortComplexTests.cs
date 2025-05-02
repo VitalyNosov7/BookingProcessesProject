@@ -12,7 +12,7 @@ namespace BookingProcesses.Tests
 
         /// <summary>Тест значения поля по умолчанию(через свойство)</summary>
         [Test]
-        public void SanatoriumName_ByDefaut_ReturnsNull ()
+        public void ResortComplexName_ByDefaut_ReturnsNull()
         {
             ResortComplex currentResortComplex = MakeSanatorium();
             var result = currentResortComplex.ResortComplexName;
@@ -21,7 +21,7 @@ namespace BookingProcesses.Tests
 
         /// <summary>Тест записи-чтения поля(через свойство)</summary>
         [Test]
-        public void Sanatorium_NewSanatoriumName_ResultsNotNull ()
+        public void ResortComplex_NewResortComplexName_ResultsNotNull()
         {
             ResortComplex currentResortComplex =  MakeSanatorium();
             String newResortComplexName = "New Resort Complex Name";

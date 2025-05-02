@@ -29,9 +29,9 @@ namespace BookingProcesses
             set { _currentGuests = value; }
         }
 
-        /// <summary>Информация о санатории.</summary>
+        /// <summary>Курортный комплекс.</summary>
         private IResortComplex? _currentResortComplex = default;
-        /// <summary>Информация о санатории.</summary>
+        /// <summary>Курортный комплекс.</summary>
         public IResortComplex CurrentResortComplex
         {
             get { return _currentResortComplex!; }
