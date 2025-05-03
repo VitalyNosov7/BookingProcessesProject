@@ -1,4 +1,4 @@
-﻿namespace BookingProcesses
+﻿namespace BookingProcesses.Models
 {
     /// <summary>
     /// Информация о человеке.
@@ -8,33 +8,39 @@
     {
         #region СВОЙСТВА
         /// <summary>Фамилия человека.</summary>
-        private String? _lastName = default;
+        private string? _lastName = default;
         /// <summary>Фамилия человека.</summary>
-        public String LastName 
+        public string LastName 
         { 
             get { return _lastName!; }
             set { _lastName = value; } 
         }
 
         /// <summary>Имя человека.</summary>
-        private String? _firstName = default;
+        private string? _firstName = default;
         /// <summary>Имя человека.</summary>
-        public String FirstName
+        public string FirstName
         {
             get { return _firstName!; }
             set { _firstName = value; }
         }
 
         /// <summary>Оочество человека.</summary>
-        private String? _patronymic = default;
+        private string? _patronymic = default;
         /// <summary>Оочество человека.</summary>
-        public String Patronymic
+        public string Patronymic
         {
             get { return _patronymic!; }
             set { _patronymic = value; }
         }
 
         //  TODO: добавить дату рождения. 
+        #endregion
+
+        #region МЕТОДЫ
+
+        
+
         #endregion
     }
 }

@@ -1,4 +1,4 @@
-﻿namespace BookingProcesses
+﻿namespace BookingProcesses.Models
 {
     /// <summary>
     /// Операция бронирования.
@@ -16,9 +16,9 @@
 
         #region СВОЙСТВА
         /// <summary>Название операции бронирования.</summary>
-        private String? _operationName = default;
+        private string? _operationName = default;
         /// <summary>Название операции бронирования.</summary>
-        public String OperationName
+        public string OperationName
         { 
             get { return _operationName!; }
             set { _operationName = value; } 

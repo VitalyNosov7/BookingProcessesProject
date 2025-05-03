@@ -1,32 +1,30 @@
 ﻿using BookingProcesses.Interfaces;
 
-namespace BookingProcesses
+namespace BookingProcesses.Models
 {
     /// <summary>
     /// Данные брони.
     /// В этом классе хранятся данные о брони.
     /// </summary>
-    public class Booking
+    public class Booking : IBookingDetails
     {
-        //  TODO: Заменить поле и свойство Sanatorium на обобщенный интерфейс!
-
         #region СВОЙСТВА
         /// <summary>Номер брони.</summary>
-        private UInt32 _bookingNumber = default;
+        private uint _bookingNumber = default;
         /// <summary>Номер брони.</summary>
-        public UInt32 BookingNumber
+        public uint BookingNumber
         {
             get { return _bookingNumber; }
             set { _bookingNumber = value; }
         }
 
         /// <summary>Информация о госте(гостях).</summary>
-        private List<Guest>? _currentGuests = default;
+        private Guest? _currentGuest = default;
         /// <summary>Информация о госте(гостях).</summary>
-        public List<Guest> CurrentGuests
+        public Guest CurrentGuest
         {
-            get { return _currentGuests!; }
-            set { _currentGuests = value; }
+            get { return _currentGuest!; }
+            set { _currentGuest = value; }
         }
 
         /// <summary>Курортный комплекс.</summary>
@@ -36,6 +34,15 @@ namespace BookingProcesses
         {
             get { return _currentResortComplex!; }
             set { _currentResortComplex = value; }
+        }
+
+        /// <summary>Лечение включено в стоимость.</summary>
+        private bool _treatmentIncluded = default;
+        /// <summary>Лечение включено в стоимость.</summary>
+        public bool TreatmentIncluded
+        {
+            get { return _treatmentIncluded; }
+            set { _treatmentIncluded = value; }
         }
         #endregion
     }

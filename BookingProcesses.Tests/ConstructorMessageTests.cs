@@ -1,4 +1,6 @@
-﻿using NUnit.Framework;
+﻿using BookingProcesses.Interfaces;
+using BookingProcesses.Models;
+using NUnit.Framework;
 
 namespace BookingProcesses.Tests
 {
@@ -24,7 +26,7 @@ namespace BookingProcesses.Tests
         public void CurrentBooking_NewCurrentBooking_ReturnsNotNull()
         {
             ConstructorMessage constructorMessage = MakeConstructorMessage();
-            Booking newCurrentBooking = new Booking();
+            IBookingDetails newCurrentBooking = new Booking();
             constructorMessage.CurrentBooking = newCurrentBooking;
             var result = constructorMessage.CurrentBooking;
             Assert.That(result, !Is.Null);

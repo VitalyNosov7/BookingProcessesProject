@@ -1,4 +1,5 @@
 ﻿using BookingProcesses.Interfaces;
+using BookingProcesses.Models;
 using NUnit.Framework;
 
 namespace BookingProcesses.Tests
@@ -36,7 +37,7 @@ namespace BookingProcesses.Tests
         public void CurrentGuests_ByDefault_ReturnsNull()
         {
             Booking currentBooking = MakeBookingData();
-            var result = currentBooking.CurrentGuests;
+            var result = currentBooking.CurrentGuest;
             Assert.That(result, Is.Null);
         }
 
@@ -45,12 +46,9 @@ namespace BookingProcesses.Tests
         public void CurretnGuests_NewListCurrentGuests_ReturnsNotNull()
         {
             Booking currentBooking = MakeBookingData();
-            var currentGuestsList = new List<Guest>()
-            {
-                new Guest(),new Guest(), new Guest()
-            };
-            currentBooking.CurrentGuests = currentGuestsList;
-            var result = currentBooking.CurrentGuests;
+            var currentGuest = new Guest();
+            currentBooking.CurrentGuest = currentGuest;
+            var result = currentBooking.CurrentGuest;
             Assert.That(result, !Is.Null);
         }
 
@@ -72,6 +70,24 @@ namespace BookingProcesses.Tests
             currentBooking.CurrentResortComplex = newCurrentResortComplex;
             var result = currentBooking.CurrentResortComplex;
             Assert.That(result, !Is.Null);
+        }
+
+        [Test]
+        public void TreatmentIncluded_ByDefalt_ReturnsFalse()
+        {
+            Booking currentBooking = MakeBookingData();
+            var result = currentBooking.TreatmentIncluded;
+            Assert.That(result, Is.False);
+        }
+
+        [Test]
+        public void TreatmentIncluded_SetValueIsTrue_ReturnsTrue()
+        {
+            Booking currentBooking = MakeBookingData();
+            Boolean valueTrue = true;
+            currentBooking.TreatmentIncluded = valueTrue;
+            var result = currentBooking.TreatmentIncluded;
+            Assert.That(result, Is.True);
         }
     }
 }

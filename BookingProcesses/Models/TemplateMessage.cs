@@ -1,4 +1,4 @@
-﻿namespace BookingProcesses
+﻿namespace BookingProcesses.Models
 {
     /// <summary>
     /// Шаблон сообщенияю
@@ -8,18 +8,18 @@
     {
         #region СВОЙСТВА
         /// <summary>Название шаблона.</summary>
-        private String? _templateMessageName = default;
+        private string? _templateMessageName = default;
         /// <summary>Название шаблона.</summary>
-        public String TemplateMessageName
+        public string TemplateMessageName
         {
             get { return _templateMessageName!; }
             set { _templateMessageName = value; }
         }
 
         /// <summary>Тело шаблона.</summary>
-        private String? _cuttentTemplateMessage = default;
+        private string? _cuttentTemplateMessage = default;
         /// <summary>Тело шаблона.</summary>
-        public String CurrentTemplateMessage
+        public string CurrentTemplateMessage
         {
             get { return _cuttentTemplateMessage!; }
             set { _cuttentTemplateMessage = value; }

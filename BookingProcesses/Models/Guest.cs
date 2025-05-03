@@ -1,4 +1,4 @@
-﻿namespace BookingProcesses
+﻿namespace BookingProcesses.Models
 {
     /// <summary>
     /// Информация о госте.
@@ -36,9 +36,9 @@
         }
 
         /// <summary>Главный гость.</summary>
-        private Boolean _chiefGuest = default;
+        private bool _chiefGuest = default;
         /// <summary>Главный гость.</summary>
-        public Boolean ChiefGuest
+        public bool ChiefGuest
         {
             get { return _chiefGuest; }
             set { _chiefGuest = value; }

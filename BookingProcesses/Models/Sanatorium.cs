@@ -1,6 +1,6 @@
 ﻿using BookingProcesses.Interfaces;
 
-namespace BookingProcesses
+namespace BookingProcesses.Models
 {
     /// <summary>
     /// Санаторий.
@@ -9,9 +9,9 @@ namespace BookingProcesses
     public class Sanatorium : IResortComplex
     {
         /// <summary>Название санатория.</summary>
-        private String? _sanatoriumName = default;
+        private string? _sanatoriumName = default;
         /// <summary>Название санатория.</summary>
-        public String ResortComplexName 
+        public string ResortComplexName 
         {
             get { return _sanatoriumName!; }
             set { _sanatoriumName = value; }

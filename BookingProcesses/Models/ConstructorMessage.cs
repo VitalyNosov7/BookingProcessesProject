@@ -1,4 +1,6 @@
-﻿namespace BookingProcesses
+﻿using BookingProcesses.Interfaces;
+
+namespace BookingProcesses.Models
 {
     /// <summary>
     /// Конструктор сообщений.
@@ -16,9 +18,9 @@
         #region СВОЙСТВА
 
         /// <summary>Текущие данные бронирования.</summary>
-        private Booking? _currentBooking = default;
+        private IBookingDetails? _currentBooking = default;
         /// <summary>Текущие данные бронирования.</summary>
-        public Booking CurrentBooking
+        public IBookingDetails CurrentBooking
         {
             get { return _currentBooking!; }
             set { _currentBooking = value; }
@@ -34,9 +36,9 @@
         }
 
         /// <summary>Сформированное сообщение.</summary>
-        private String? _constructoredMessage = default;
+        private string? _constructoredMessage = default;
         /// <summary>Сформированное сообщение.</summary>
-        public String ConstructoredMessage
+        public string ConstructoredMessage
         {
             get { return _constructoredMessage!; }
             set { _constructoredMessage = value; }
