@@ -2,6 +2,7 @@
 
 namespace BookingProcesses
 {
+
     public class EnterStringValue : IGetStringValue
     {
         public String GetStringValue()

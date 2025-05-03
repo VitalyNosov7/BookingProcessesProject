@@ -9,7 +9,7 @@ namespace BookingProcesses.Controllers
     /// </summary>
     public class PersonController
     {
-        private Person? _currentPerson = default;
+        private Person? _currentPerson = new Person();
         public Person CurrentPerson
         {
             get { return _currentPerson!; }
@@ -24,6 +24,10 @@ namespace BookingProcesses.Controllers
             {
                 _getStringValue = new EnterStringValue();
                 CurrentPerson.LastName = _getStringValue.GetStringValue();
+            }
+            else
+            {
+                throw new NullReferenceException("В классе PersonController отсутствует ссылка на объект Person!");
             }
         }
 
