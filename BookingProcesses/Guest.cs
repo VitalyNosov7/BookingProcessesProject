@@ -15,6 +15,35 @@
             get { return _currentPerson!; }
             set { _currentPerson = value; }
         }
+
+        /// <summary>Дата начала проживания.</summary>
+        private DateTime _startPeriodResidence = default;
+        /// <summary>Дата начала проживания.</summary>
+        public DateTime StartPeriodResidence
+        {
+            get { return _startPeriodResidence; }
+            set { _startPeriodResidence = value; }
+        }
+
+
+        /// <summary>Дата окончания проживания.</summary>
+        private DateTime _endPeriodResidence = default;
+        /// <summary>Дата окончания проживания.</summary>
+        public DateTime EndPeriodResidence
+        {
+            get { return _endPeriodResidence; }
+            set { _endPeriodResidence = value; }
+        }
+
+        /// <summary>Главный гость.</summary>
+        private Boolean _chiefGuest = default;
+        /// <summary>Главный гость.</summary>
+        public Boolean ChiefGuest
+        {
+            get { return _chiefGuest; }
+            set { _chiefGuest = value; }
+        }
+
         #endregion
     }
 }

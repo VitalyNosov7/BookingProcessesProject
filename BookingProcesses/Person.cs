@@ -33,6 +33,8 @@
             get { return _patronymic!; }
             set { _patronymic = value; }
         }
+
+        //  TODO: добавить дату рождения. 
         #endregion
     }
 }

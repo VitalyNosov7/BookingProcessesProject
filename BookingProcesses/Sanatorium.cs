@@ -2,6 +2,10 @@
 
 namespace BookingProcesses
 {
+    /// <summary>
+    /// Санаторий.
+    /// В этом классе хранится информация о санатории.
+    /// </summary>
     public class Sanatorium : IResortComplex
     {
         /// <summary>Название санатория.</summary>

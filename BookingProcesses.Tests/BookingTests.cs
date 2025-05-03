@@ -68,7 +68,7 @@ namespace BookingProcesses.Tests
         public void CurrentResortComplex_NewCurrentSanatorium_ReturnsNotNull()
         {
             Booking currentBooking = MakeBookingData();
-            IResortComplex newCurrentResortComplex = new ResortComplex();
+            IResortComplex newCurrentResortComplex = new Sanatorium();
             currentBooking.CurrentResortComplex = newCurrentResortComplex;
             var result = currentBooking.CurrentResortComplex;
             Assert.That(result, !Is.Null);

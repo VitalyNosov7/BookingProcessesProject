@@ -50,13 +50,5 @@
       <FileName>TemplateMessage.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="BookingProcesses.ResortComplex">
-    <Position X="1" Y="0.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAABAAABAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>ResortComplex.cs</FileName>
-    </TypeIdentifier>
-    <Lollipop Position="0.333" />
-  </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>
