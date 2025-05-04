@@ -8,12 +8,12 @@
     {
         #region СВОЙСТВА
         /// <summary>Фамилия человека.</summary>
-        private string? _lastName = default;
+        private string _lastName = string.Empty;
         /// <summary>Фамилия человека.</summary>
-        public string LastName 
-        { 
-            get { return _lastName!; }
-            set { _lastName = value; } 
+        public string LastName
+        {
+            get { return _lastName; }
+            set { _lastName = value; }
         }
 
         /// <summary>Имя человека.</summary>
@@ -34,12 +34,17 @@
             set { _patronymic = value; }
         }
 
-        //  TODO: добавить дату рождения. 
+        private DateTime _birthday = default;
+        public DateTime Birthday
+        {
+            get { return _birthday; }
+            set { _birthday = value; }
+        }
         #endregion
 
         #region МЕТОДЫ
 
-        
+
 
         #endregion
     }

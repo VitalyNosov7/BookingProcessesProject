@@ -37,7 +37,7 @@ namespace BookingProcesses.Tests
         public void CurrentGuests_ByDefault_ReturnsNull()
         {
             Booking currentBooking = MakeBookingData();
-            var result = currentBooking.CurrentGuest;
+            var result = currentBooking.CurrentListGuest;
             Assert.That(result, Is.Null);
         }
 
@@ -46,9 +46,9 @@ namespace BookingProcesses.Tests
         public void CurretnGuests_NewListCurrentGuests_ReturnsNotNull()
         {
             Booking currentBooking = MakeBookingData();
-            var currentGuest = new Guest();
-            currentBooking.CurrentGuest = currentGuest;
-            var result = currentBooking.CurrentGuest;
+            var currentListGuest = new List<Guest>();
+            currentBooking.CurrentListGuest = currentListGuest;
+            var result = currentBooking.CurrentListGuest;
             Assert.That(result, !Is.Null);
         }
 

@@ -12,22 +12,22 @@ namespace BookingProcesses.Tests
         }
 
         [Test]
-        public void CurrentPersonLastName_ByDefault_ReturnsNull()
+        public void CurrentPersonLastName_ByDefault_ReturnsEmpty()
         {
             PersonController currentPersonController = MakePersonController();
             var currentPersonLastName  = currentPersonController.CurrentPerson.LastName;
-            Assert.That(currentPersonLastName, Is.Null);
+            Assert.That(currentPersonLastName, Is.Empty);
         }
 
         [Test]
-        public void EnterLastNamePerson_LastName_ReturnsNotNull()
+        public void EnterLastNamePerson_LastName_ReturnsNotEmpty()
         {
             PersonController currentPersonController = MakePersonController();
             //currentPersonController.EnterLastNamePerson();
             String fakeEnteredLastName = "FakeEnteredLastName";
             currentPersonController.CurrentPerson.LastName = fakeEnteredLastName;
             var currentPersonLastName = currentPersonController.CurrentPerson.LastName;
-            Assert.That(currentPersonLastName, !Is.Null);
+            Assert.That(currentPersonLastName, !Is.Empty);
         }
     }
 }

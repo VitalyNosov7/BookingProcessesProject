@@ -36,9 +36,9 @@ namespace BookingProcesses.Tests
         public void StartPeriodResidence_ByDefault_ReturnsTrue ()
         {
             Guest currentGuest = MakeGuest();
-            DateTime defaultDateTime = new DateTime(0001,01,01,0,00,00);
+            DateTime defaultStartPeriodResidence = new DateTime(0001,01,01,0,00,00);
             var currentStartPeriodResidence = currentGuest.StartPeriodResidence;
-            var result = defaultDateTime == currentStartPeriodResidence;
+            var result = defaultStartPeriodResidence == currentStartPeriodResidence;
             Assert.That(result, Is.True);
         }
 
@@ -47,9 +47,9 @@ namespace BookingProcesses.Tests
         public void StartPeriodResidence_NewDate_ReturnsFalse()
         {
             Guest currentGuest = MakeGuest();
-            DateTime defaultDateTime = new DateTime(0001, 01, 01, 0, 00, 00);
+            DateTime defaultStartPeriodResidence = new DateTime(0001, 01, 01, 0, 00, 00);
             var currentStartPeriodResidence = DateTime.Now;
-            var result = defaultDateTime == currentStartPeriodResidence;
+            var result = defaultStartPeriodResidence == currentStartPeriodResidence;
             Assert.That(result, Is.False);
         }
 
@@ -58,9 +58,9 @@ namespace BookingProcesses.Tests
         public void EndPeriodResidence_ByDefault_ReturnsTrue()
         {
             Guest currentGuest = MakeGuest();
-            DateTime defaultDateTime = new DateTime(0001, 01, 01, 0, 00, 00);
+            DateTime defaultEndPeriodResidence = new DateTime(0001, 01, 01, 0, 00, 00);
             var currentEndPeriodResidence = currentGuest.StartPeriodResidence;
-            var result = defaultDateTime == currentEndPeriodResidence;
+            var result = defaultEndPeriodResidence == currentEndPeriodResidence;
             Assert.That(result, Is.True);
         }
 
@@ -69,9 +69,9 @@ namespace BookingProcesses.Tests
         public void EndPeriodResidence_NewDate_ReturnsFalse()
         {
             Guest currentGuest = MakeGuest();
-            DateTime defaultDateTime = new DateTime(0001, 01, 01, 0, 00, 00);
+            DateTime defaultEndPeriodResidence = new DateTime(0001, 01, 01, 0, 00, 00);
             var currentEndPeriodResidence = DateTime.Now;
-            var result = defaultDateTime == currentEndPeriodResidence;
+            var result = defaultEndPeriodResidence == currentEndPeriodResidence;
             Assert.That(result, Is.False);
         }
 

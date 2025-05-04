@@ -19,12 +19,12 @@ namespace BookingProcesses.Models
         }
 
         /// <summary>Информация о госте(гостях).</summary>
-        private Guest? _currentGuest = default;
+        private List<Guest>? _currentListGuest = default;
         /// <summary>Информация о госте(гостях).</summary>
-        public Guest CurrentGuest
+        public List<Guest> CurrentListGuest
         {
-            get { return _currentGuest!; }
-            set { _currentGuest = value; }
+            get { return _currentListGuest!; }
+            set { _currentListGuest = value; }
         }
 
         /// <summary>Курортный комплекс.</summary>

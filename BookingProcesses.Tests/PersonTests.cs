@@ -13,22 +13,22 @@ namespace BookingProcesses.Tests
 
         /// <summary>Тест значения поля по умолчанию(через свойство)</summary>
         [Test]
-        public void LastName_ByDefault_ReturnsNull()
+        public void LastName_ByDefault_ReturnsEmpty()
         {
             Person currentPerson = MakePerson();
             var result = currentPerson.LastName;
-            Assert.That(result, Is.Null);
+            Assert.That(result, Is.Empty);
         }
 
         /// <summary>Тест записи-чтения поля(через свойство)</summary>
         [Test]
-        public void LastName_NewLastName_ReturnsNotNull()
+        public void LastName_NewLastName_ReturnsNotEmpty()
         {
             Person currentPerson = MakePerson();
             String newLastName = "New Last Name";
             currentPerson.LastName = newLastName;
             var result = currentPerson.LastName;
-            Assert.That(result, !Is.Null);
+            Assert.That(result, !Is.Empty);
         }
 
         /// <summary>Тест значения поля по умолчанию(через свойство)</summary>
@@ -69,6 +69,28 @@ namespace BookingProcesses.Tests
             currentPerson.Patronymic = newPatronymic;
             var result = currentPerson.Patronymic;
             Assert.That(result, !Is.Null);
+        }
+
+        /// <summary>Тест значения поля по умолчанию(через свойство)</summary>
+        [Test]
+        public void Birthday_ByDefault_ReturnTrue()
+        {
+            Person currentPerson = MakePerson();
+            DateTime defaultBirthday = new DateTime(0001, 01, 01, 0, 00, 00);
+            var currentBirthday = currentPerson.Birthday;
+            var result = defaultBirthday == currentBirthday;
+            Assert.That(result, Is.True);
+        }
+
+        /// <summary>Тест записи-чтения поля(через свойство)</summary>
+        [Test]
+        public void Birthday_NewBirthday_ReturnsFalse()
+        {
+            Person currentPerson = MakePerson();
+            DateTime defaultBirthday = new DateTime(0001, 01, 01, 0, 00, 00);
+            var currentBirthday = DateTime.Now;
+            var result = defaultBirthday == currentBirthday;
+            Assert.That(result, Is.False);
         }
     }
 }

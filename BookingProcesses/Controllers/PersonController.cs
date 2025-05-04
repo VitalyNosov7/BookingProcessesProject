@@ -9,26 +9,28 @@ namespace BookingProcesses.Controllers
     /// </summary>
     public class PersonController
     {
-        private Person? _currentPerson = new Person();
+        /// <summary>Персона.</summary>
+        private Person _currentPerson = new Person();
+        /// <summary>Персона.</summary>
         public Person CurrentPerson
         {
-            get { return _currentPerson!; }
+            get { return _currentPerson; }
             set { _currentPerson = value; }
         }
 
+        /// <summary>Получить строковое значение.</summary>
         private IGetStringValue? _getStringValue = default;
-
-        public void EnterLastNamePerson()
+        /// <summary>Получить строковое значение.</summary>
+        public IGetStringValue GetStringValue
         {
-            if (CurrentPerson != null)
-            {
-                _getStringValue = new EnterStringValue();
-                CurrentPerson.LastName = _getStringValue.GetStringValue();
-            }
-            else
-            {
-                throw new NullReferenceException("В классе PersonController отсутствует ссылка на объект Person!");
-            }
+            get { return _getStringValue!; }
+            set { _getStringValue = value; }
+        }
+
+        /// <summary>Добавить фамилию персоны.</summary>
+        public void AddLastNamePerson()
+        {
+                CurrentPerson.LastName = GetStringValue.GetStringValue();         
         }
 
 
