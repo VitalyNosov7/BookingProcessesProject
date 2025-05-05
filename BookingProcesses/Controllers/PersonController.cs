@@ -30,7 +30,12 @@ namespace BookingProcesses.Controllers
         /// <summary>Добавить фамилию персоны.</summary>
         public void AddLastNamePerson()
         {
-                CurrentPerson.LastName = GetStringValue.GetStringValue();         
+            CurrentPerson.LastName = GetStringValue.GetStringValue();
+        }
+
+        public void AddFirstNamePerson()
+        {
+            CurrentPerson.FirstName = GetStringValue.GetStringValue();
         }
 
 
