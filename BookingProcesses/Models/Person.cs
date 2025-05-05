@@ -17,7 +17,7 @@
         }
 
         /// <summary>Имя человека.</summary>
-        private string? _firstName = default;
+        private string? _firstName = string.Empty;
         /// <summary>Имя человека.</summary>
         public string FirstName
         {
@@ -26,7 +26,7 @@
         }
 
         /// <summary>Оочество человека.</summary>
-        private string? _patronymic = default;
+        private string? _patronymic = string.Empty;
         /// <summary>Оочество человека.</summary>
         public string Patronymic
         {

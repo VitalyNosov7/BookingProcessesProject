@@ -33,11 +33,22 @@ namespace BookingProcesses.Controllers
             CurrentPerson.LastName = GetStringValue.GetStringValue();
         }
 
+        /// <summary>Добавить имя персоны.</summary>
         public void AddFirstNamePerson()
         {
             CurrentPerson.FirstName = GetStringValue.GetStringValue();
         }
 
+        /// <summary>Добавить отчество персоны.</summary>
+        public void AddPatronymicPerson()
+        {
+            CurrentPerson.Patronymic = GetStringValue.GetStringValue();
+        }
 
+        /// <summary>Добавить дату рождения персоны.</summary>
+        public void AddBirthdayPerson()
+        {
+            CurrentPerson.Birthday = Convert.ToDateTime(GetStringValue.GetStringValue());
+        }
     }
 }

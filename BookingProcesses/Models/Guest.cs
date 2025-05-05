@@ -25,7 +25,6 @@
             set { _startPeriodResidence = value; }
         }
 
-
         /// <summary>Дата окончания проживания.</summary>
         private DateTime _endPeriodResidence = default;
         /// <summary>Дата окончания проживания.</summary>
