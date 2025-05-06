@@ -1,4 +1,5 @@
-﻿using BookingProcesses.Interfaces;
+﻿using BookingProcesses.Data;
+using BookingProcesses.Interfaces;
 using BookingProcesses.Models;
 using NUnit.Framework;
 
@@ -7,16 +8,16 @@ namespace BookingProcesses.Tests
     [TestFixture]
     public class ConstructorMessageTests
     {
-        private ConstructorMessage MakeConstructorMessage()
+        private MessageModel MakeConstructorMessage()
         {
-            return new ConstructorMessage(null, null);
+            return new MessageModel(null, null);
         }
 
         /// <summary>Тест значения поля по умолчанию(через свойство)</summary>
         [Test]
         public void CurrentBooking_ByDefault_ReturnsNull()
         {
-            ConstructorMessage constructorMessage = MakeConstructorMessage();
+            MessageModel constructorMessage = MakeConstructorMessage();
             var result = constructorMessage.CurrentBooking;
             Assert.That(result, Is.Null);
         }
@@ -25,7 +26,7 @@ namespace BookingProcesses.Tests
         [Test]
         public void CurrentBooking_NewCurrentBooking_ReturnsNotNull()
         {
-            ConstructorMessage constructorMessage = MakeConstructorMessage();
+            MessageModel constructorMessage = MakeConstructorMessage();
             IBookingDetails newCurrentBooking = new Booking();
             constructorMessage.CurrentBooking = newCurrentBooking;
             var result = constructorMessage.CurrentBooking;
@@ -36,7 +37,7 @@ namespace BookingProcesses.Tests
         [Test]
         public void CurrentBookingOperation_ByDefault_ReturnsNull()
         {
-            ConstructorMessage constructorMessage = MakeConstructorMessage();
+            MessageModel constructorMessage = MakeConstructorMessage();
             var result = constructorMessage.CurrentBookingOperation;
             Assert.That(result, Is.Null);
         }
@@ -45,7 +46,7 @@ namespace BookingProcesses.Tests
         [Test]
         public void CurrentBookingOperation_NewBookingOperation_ReturnsNotNull()
         {
-            ConstructorMessage constructorMessage = MakeConstructorMessage();
+            MessageModel constructorMessage = MakeConstructorMessage();
             BookingOperation newBookingOperation = new BookingOperation(null);
             constructorMessage.CurrentBookingOperation = newBookingOperation;
             var result = constructorMessage.CurrentBookingOperation;
@@ -56,7 +57,7 @@ namespace BookingProcesses.Tests
         [Test]
         public void ConstructoredMessage_ByDefault_ReturnsNull()
         {
-            ConstructorMessage constructorMessage = MakeConstructorMessage();
+            MessageModel constructorMessage = MakeConstructorMessage();
             var result = constructorMessage.ConstructoredMessage;
             Assert.That(result, Is.Null);
         }
@@ -65,7 +66,7 @@ namespace BookingProcesses.Tests
         [Test]
         public void ConstructoredMessage_NewMessage_ReturnsNotNull()
         {
-            ConstructorMessage currentConstructorMessage = MakeConstructorMessage();
+            MessageModel currentConstructorMessage = MakeConstructorMessage();
             String newConstructoredMessage = "New Message";
             currentConstructorMessage.ConstructoredMessage = newConstructoredMessage;
             var result = currentConstructorMessage.ConstructoredMessage;
@@ -76,7 +77,7 @@ namespace BookingProcesses.Tests
         [Test]
         public void TemplateMessage_ByDefault_ReturnNull()
         {
-            ConstructorMessage currentConstructorMessage = MakeConstructorMessage();
+            MessageModel currentConstructorMessage = MakeConstructorMessage();
             var result = currentConstructorMessage.CurrentTemplateMessage;
             Assert.That(result, Is.Null);
         }
@@ -85,7 +86,7 @@ namespace BookingProcesses.Tests
         [Test]
         public void TemplateMessage_NewTemplateMessage_ReturnsNotNull()
         {
-            ConstructorMessage currentConstructorMessage = MakeConstructorMessage();
+            MessageModel currentConstructorMessage = MakeConstructorMessage();
             TemplateMessage newTemplateMessage = new TemplateMessage();
             currentConstructorMessage.CurrentTemplateMessage = newTemplateMessage;
             var result = currentConstructorMessage.CurrentTemplateMessage;

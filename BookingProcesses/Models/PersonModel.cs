@@ -1,13 +1,13 @@
-﻿using BookingProcesses.Interfaces;
-using BookingProcesses.Models;
+﻿using BookingProcesses.Data;
+using BookingProcesses.Interfaces;
 
-namespace BookingProcesses.Controllers
+namespace BookingProcesses.Models
 {
     /// <summary>
     /// Создание персоны.
     /// В этом классе обрабатываются данные персоны
     /// </summary>
-    public class PersonController
+    public class PersonModel
     {
         /// <summary>Персона.</summary>
         private Person _currentPerson = new Person();

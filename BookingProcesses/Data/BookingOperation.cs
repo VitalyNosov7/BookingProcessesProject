@@ -1,4 +1,4 @@
-﻿namespace BookingProcesses.Models
+﻿namespace BookingProcesses.Data
 {
     /// <summary>
     /// Операция бронирования.

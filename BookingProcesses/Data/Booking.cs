@@ -1,6 +1,6 @@
 ﻿using BookingProcesses.Interfaces;
 
-namespace BookingProcesses.Models
+namespace BookingProcesses.Data
 {
     /// <summary>
     /// Данные брони.

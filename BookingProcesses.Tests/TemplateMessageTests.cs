@@ -1,4 +1,4 @@
-﻿using BookingProcesses.Models;
+﻿using BookingProcesses.Data;
 using NUnit.Framework;
 
 namespace BookingProcesses.Tests

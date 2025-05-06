@@ -1,15 +1,18 @@
-﻿using BookingProcesses.Interfaces;
+﻿using BookingProcesses.Data;
+using BookingProcesses.Interfaces;
 
 namespace BookingProcesses.Models
 {
+    //  TODO: Пересмотреть назначение этого класса - свойства и методы!
+
     /// <summary>
     /// Конструктор сообщений.
     /// В этом классе собирается готовое сообщение по передаваемому шаблону.
     /// 
     /// </summary>
-    public class ConstructorMessage
+    public class MessageModel
     {
-        public ConstructorMessage(BookingOperation? bookingOperation, TemplateMessage? templateMessage)
+        public MessageModel(BookingOperation? bookingOperation, TemplateMessage? templateMessage)
         {
             CurrentBookingOperation = bookingOperation!;
             CurrentTemplateMessage = templateMessage!;
